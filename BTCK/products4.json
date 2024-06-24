@@ -1,0 +1,50 @@
+[
+    {
+        "id": 25,
+        "name":" Kem nền FIT ME",
+        "price": 279.000 ,
+        "image": "./assets/images/products/kemnen.jpg"
+    },
+    {
+        "id": 26,
+        "name":" Son dưỡng DIOR",
+        "price": 870.000,
+        "image": "./assets/images/products/sonduong.jpg" 
+    },
+    {
+        "id": 27,
+        "name":" Kem chống nắng",
+        "price": 450.000,
+        "image": "./assets/images/products/kcn.jpg"
+    },
+    {
+        "id": 28,
+        "name":" Phấn mắt 3CE",
+        "price": 350.000,
+        "image": "./assets/images/products/phanmat.jpg"
+    },
+    {
+        "id": 29,
+        "name":" Dưỡng thể Vaseline",
+        "price": 289.000,
+        "image": "./assets/images/products/duongthe.jpg"
+    },
+    {
+        "id": 30,
+        "name":" Sữa rửa mặt",
+        "price": 268.000,
+        "image": "./assets/images/products/srm.jpg"
+    },
+    {
+        "id": 31,
+        "name":" Nước hoa Sauvage",
+        "price": 896.000,
+        "image": "./assets/images/products/nuochoa2.jpg"
+    },
+    {
+        "id": 32,
+        "name":" Phấn phủ GUCCI",
+        "price": 231.000,
+        "image": "./assets/images/products/phanphu.jpg"
+    }
+]

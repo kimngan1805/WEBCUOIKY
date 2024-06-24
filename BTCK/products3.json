@@ -1,0 +1,52 @@
+[
+
+    {
+        "id": 17,
+        "name": "Đồng hồ ELIO 34.8mm Nữ",
+        "price": 1890.000,
+        "image":"./assets/images/products/dongho1.jpg"
+    },
+    {
+        "id": 18,
+        "name": "Đồng hồ Nữ Citizen Eco-Drive",
+        "price": 3200.000,
+        "image":"./assets/images/products/dongho2.jpg"
+    },
+    {
+        "id": 19,
+        "name": "Nước hoa DIOR SAUVAGE PARFUM",
+        "price": 3290.000,
+        "image":"./assets/images/products/nuochoa.jpg"
+    },
+    {
+        "id": 20,
+        "name": "Kính mắt GM Karl",
+        "price": 4320.000,
+        "image":"./assets/images/products/kinhmat.jpg"
+    },
+    {
+        "id": 21,
+        "name": "Dây chuyền Hermes",
+        "price": 2120.000,
+        "image":"./assets/images/products/daychuyen.jpg"
+    },
+    {
+        "id": 22,
+        "name": "Túi xách CHANEL",
+        "price": 3400.000,
+        "image":"./assets/images/products/tuixach.jpg"
+    },
+    {
+        "id": 23,
+        "name": "Túi xách MLB",
+        "price": 790.000,
+        "image":"./assets/images/products/tuixach2.jpg"
+    },
+    {
+        "id": 24,
+        "name": "Lắc tay LV",
+        "price": 3290.000,
+        "image":"./assets/images/products/lactay.jpg"
+    }
+
+]

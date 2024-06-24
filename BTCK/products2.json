@@ -1,0 +1,50 @@
+[
+    {
+        "id": 9,
+        "name":" NY 90",
+        "price": 1970.000,
+        "image":"https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/887855da359e4527a857aebc01150c7a_9366/NY_90_Shoes_White_GX4394_01_standard.jpg?width=320"
+    },
+    {
+        "id": 10,
+        "image":"https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/ba38c9d9544c4354b3a7af0601798915_9366/Continental_80_Stripes_Shoes_White_GX1916_01_standard.jpg?width=320",
+        "name": "CONTINENTAL 80",
+        "price":2700.000
+    },
+    {
+        "id":11,
+        "name":"Courtic",
+        "image":"https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/ba38c9d9544c4354b3a7af0601798915_9366/Continental_80_Stripes_Shoes_White_GX1916_01_standard.jpg?width=320",
+        "price": 2700.000
+    },
+    {
+        "id": 12,
+        "name": "Standt",
+        "price": 2100.000,
+        "image":"https://assets.adidas.com/images/w_600,f_auto,q_auto/1ab27be1e3a24323988d408cd1d86830_9366/Stadt_Shoes_Black_JI1882_01_standard.jpg?width=320"
+    },
+    {
+        "id": 13,
+        "name": "Stalt",
+        "price": 2000.000,
+        "image":"https://assets.adidas.com/images/w_600,f_auto,q_auto/83f36e7fbdfe4bac9d68ac6c18451783_9366/Stadt_Shoes_Blue_JI1884_01_standard.jpg?width=320" 
+    },
+    {
+        "id": 14,
+        "name": "Giày da nâu",
+        "price": 2100.000,
+        "image":"./assets/images/products/shoe-1.jpg?width=320"
+    },
+    {
+        "id": 15,
+        "name": " Giày da đen",
+        "price": 4900.000,
+        "image":"./assets/images/products/shoe-3.jpg?width=320"
+    },
+    {
+        "id": 16,
+        "name": "Giày da bóng",
+        "price": 790.000,
+        "image":"./assets/images/products/shoe-2.jpg?width=320"
+    }
+]

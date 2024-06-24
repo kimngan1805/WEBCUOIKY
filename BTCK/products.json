@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "name":" Áo thun ngắn tay",
+        "price": 119.000 ,
+        "image": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/464686/item/goods_53_464686.jpg?width=320"
+    },
+    {
+        "id": 2,
+        "name":" Áo croptop kiểu hiện đại",
+        "price": 341.000,
+        "image": "https://image.uniqlo.com/UQ/ST3/vn/imagesgoods/469443/item/vngoods_00_469443.jpg?width=320" 
+    },
+    {
+        "id": 3,
+        "name":" Váy xòe cách tân",
+        "price": 470.000,
+        "image": "https://image.uniqlo.com/UQ/ST3/vn/imagesgoods/465955/item/vngoods_65_465955.jpg?width=320"
+    },
+    {
+        "id": 4,
+        "name":" Sơ mi trắng nữ",
+        "price": 350.000,
+        "image": "https://image.uniqlo.com/UQ/ST3/vn/imagesgoods/470907/item/vngoods_02_470907.jpg?width=320"
+    },
+    {
+        "id": 5,
+        "name":" Áo khoác nam vải da",
+        "price": 789.000,
+        "image": "./assets/images/products/jacket-5.jpg"
+    },
+    {
+        "id": 6,
+        "name":" Áo khoác bóng chày",
+        "price": 668.000,
+        "image": "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/462028/item/goods_30_462028.jpg?width=320"
+    },
+    {
+        "id": 7,
+        "name":" Áo khóac kiểu sơ mi vải Jersey",
+        "price": 896.000,
+        "image": "https://image.uniqlo.com/UQ/ST3/vn/imagesgoods/470298/item/vngoods_56_470298.jpg?width=320"
+    },
+    {
+        "id": 8,
+        "name":" Quần Dry Easy Short co giãn",
+        "price": 231.000,
+        "image": "https://image.uniqlo.com/UQ/ST3/vn/imagesgoods/454780/item/vngoods_31_454780.jpg?width=750"
+    }
+]
