@@ -1,0 +1,501 @@
+/* Phần CSS ban đầu */
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden; /* Vô hiệu hóa cuộn ngang */
+    overflow-y: auto; /* Cho phép cuộn dọc */
+}
+
+.container {
+    width: 900px;
+    margin: auto;
+    max-width: 90vw;
+    text-align: center;
+    padding-top: 10px;
+    transition: transform .5s;
+}
+
+svg {
+    width: 30px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    background-color: #fff;
+    box-shadow: var(--box-shadow);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.icon-cart {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.icon-cart span {
+    position: absolute;
+    background-color: red;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #fff;
+    top: -10px;
+    right: -10px;
+    font-size: 12px;
+}
+
+.title {
+    font-size: xx-large;
+}
+.listProduct, .listproducts2, .listproducts3, .listproducts4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.listProduct .item, .listproducts2 .item, .listproducts3 .item {
+    background-color: #EEEEE6;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.listProduct .item img, .listproducts2 .item img, .listproducts3 .item img, .listproducts4 .item img {
+    width: 90%;
+    filter: drop-shadow(0 50px 20px #0009);
+}
+
+.listProduct .item h2, .listproducts2 .item h2, .listproducts3 .item h2, .listproducts4 .item h2 {
+    font-weight: 500;
+    font-size: large;
+}
+
+.listProduct .item .price, .listproducts2 .item .price, .listproducts3 .item .price, .listproducts4 .item .price {
+    letter-spacing: 7px;
+    font-size: small;
+}
+
+.listProduct .item button, .listproducts2 .item button, .listproducts3 .item button, .listproducts4 .item button {
+    background-color: #353432;
+    color: #eee;
+    border: none;
+    padding: 5px 10px;
+    margin-top: 10px;
+    border-radius: 20px;
+}
+
+
+.cartTab {
+    width: 400px;
+    background-color: #353432;
+    color: #eee;
+    position: fixed;
+    top: 0;
+    right: -400px;
+    bottom: 0;
+    display: grid;
+    grid-template-rows: 70px 1fr 70px;
+    transition: .5s;
+}
+
+body.showCart .cartTab {
+    right: 0;
+}
+
+body.showCart .container {
+    transform: translateX(-250px);
+}
+
+.cartTab h1 {
+    padding: 20px;
+    margin: 0;
+    font-weight: 300;
+}
+
+.cartTab .btn {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.cartTab button {
+    background-color: #E8BC0E;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.cartTab .close {
+    background-color: #eee;
+}
+
+.listCart .item img {
+    width: 100%;
+}
+
+.listCart .item {
+    display: grid;
+    grid-template-columns: 70px 150px 50px 1fr;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+}
+
+.listCart .quantity span {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+    color: #555;
+    cursor: pointer;
+}
+
+.listCart .quantity span:nth-child(2) {
+    background-color: transparent;
+    color: #eee;
+    cursor: auto;
+}
+
+.listCart .item:nth-child(even) {
+    background-color: #eee1;
+}
+
+.listCart {
+    overflow: auto;
+}
+
+.listCart::-webkit-scrollbar {
+    width: 0;
+}
+
+@media only screen and (max-width: 1200px) {
+    .listProduct {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .listproducts2,
+    .listproducts3,
+    .listproducts4 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .listProduct {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .listproducts2,
+    .listproducts3,
+    .listproducts4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+/* CSS cho responsive trên điện thoại */
+@media only screen and (max-width: 768px) {
+    /* CSS cho danh sách giỏ hàng */
+.cart-list {
+    position: fixed; /* Vị trí cố định trên màn hình */
+    top: 50%; /* Đưa danh sách giỏ hàng lên giữa màn hình theo chiều dọc */
+    left: 50%; /* Đưa danh sách giỏ hàng vào giữa màn hình theo chiều ngang */
+    transform: translate(-50%, -50%); /* Đưa danh sách giỏ hàng chính giữa màn hình */
+    background-color: #fff; /* Màu nền */
+    padding: 20px; /* Khoảng cách bên trong danh sách giỏ hàng */
+    max-height: 80%; /* Chiều cao tối đa */
+    overflow-y: auto; /* Cho phép cuộn khi danh sách quá dài */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng */
+    border: 1px solid #ccc; /* Viền */
+    z-index: 1000; /* Độ sâu z-index để hiển thị trên các phần tử khác */
+    max-width: 90%; /* Chiều rộng tối đa */
+}
+
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .logo {
+        font-size: 24px; /* Kích thước font cho logo */
+        margin-bottom: 10px; /* Khoảng cách dưới logo */
+        color: black; /* Màu chữ cho logo */
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%; /* Chiếm toàn bộ chiều rộng */
+        display: none; /* Ẩn navbar chính */
+    }
+
+    .navbar.active {
+        display: flex; /* Hiển thị navbar con khi active */
+        position: absolute;
+        top: 100%; /* Hiển thị phía dưới header */
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+    }
+
+    .icons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%; /* Chiếm toàn bộ chiều rộng */
+        margin-bottom: 10px; /* Khoảng cách dưới icons */
+    }
+
+    .search-form {
+        flex-grow: 1; /* Chiếm hết không gian còn lại */
+        max-width: 70%; /* Giới hạn chiều rộng để không bị tràn */
+        margin-right: 10px; /* Khoảng cách phải của form tìm kiếm */
+    }
+
+    #search-input {
+        flex: 1; /* Chiếm hết không gian còn lại */
+        padding: 12px; /* Căn lề bên trong input */
+        box-sizing: border-box; /* Đảm bảo padding không làm tăng kích thước của input */
+    }
+
+    .btn {
+        padding: 15px 40px; /* Điều chỉnh padding để nút lớn hơn */
+        min-width: 150px; /* Độ rộng tối thiểu của nút */
+        font-size: 1.7rem;
+        color: #fff;
+        background: pink;
+        border-radius: .5rem;
+        cursor: pointer;
+        display: inline-block;
+        text-align: center;
+    }
+    
+
+    .icon-cart {
+        display: flex;
+        justify-content: center; /* Căn giữa theo chiều ngang */
+        margin-top: 10px; /* Khoảng cách với form tìm kiếm */
+    }
+
+  /* CSS cho responsive trên điện thoại */
+@media only screen and (max-width: 768px) {
+    /* CSS cho danh sách giỏ hàng */
+    .cart-list {
+        position: fixed; /* Vị trí cố định trên màn hình */
+        top: 50%; /* Đưa danh sách giỏ hàng lên giữa màn hình theo chiều dọc */
+        left: 50%; /* Đưa danh sách giỏ hàng vào giữa màn hình theo chiều ngang */
+        transform: translate(-50%, -50%); /* Đưa danh sách giỏ hàng chính giữa màn hình */
+        background-color: #fff; /* Màu nền */
+        padding: 20px; /* Khoảng cách bên trong danh sách giỏ hàng */
+        max-height: 80%; /* Chiều cao tối đa */
+        overflow-y: auto; /* Cho phép cuộn khi danh sách quá dài */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng */
+        border: 1px solid #ccc; /* Viền */
+        z-index: 1000; /* Độ sâu z-index để hiển thị trên các phần tử khác */
+        max-width: 90%; /* Chiều rộng tối đa */
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .logo {
+        font-size: 24px; /* Kích thước font cho logo */
+        margin-bottom: 10px; /* Khoảng cách dưới logo */
+        color: black; /* Màu chữ cho logo */
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%; /* Chiếm toàn bộ chiều rộng */
+        display: none; /* Ẩn navbar chính */
+    }
+
+    .navbar.active {
+        display: flex; /* Hiển thị navbar con khi active */
+        position: absolute;
+        top: 100%; /* Hiển thị phía dưới header */
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+    }
+
+    .icons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%; /* Chiếm toàn bộ chiều rộng */
+        margin-bottom: 10px; /* Khoảng cách dưới icons */
+    }
+
+    .search-form {
+        flex-grow: 1; /* Chiếm hết không gian còn lại */
+        max-width: 70%; /* Giới hạn chiều rộng để không bị tràn */
+        margin-right: 10px; /* Khoảng cách phải của form tìm kiếm */
+    }
+
+    #search-input {
+        flex: 1; /* Chiếm hết không gian còn lại */
+        padding: 12px; /* Căn lề bên trong input */
+        box-sizing: border-box; /* Đảm bảo padding không làm tăng kích thước của input */
+    }
+
+    .btn {
+        padding: 15px 40px; /* Điều chỉnh padding để nút lớn hơn */
+        min-width: 150px; /* Độ rộng tối thiểu của nút */
+        font-size: 1.7rem;
+        color: #fff;
+        background: pink;
+        border-radius: .5rem;
+        cursor: pointer;
+        display: inline-block;
+        text-align: center;
+    }
+    
+    .icon-cart {
+        display: flex;
+        justify-content: center; /* Căn giữa theo chiều ngang */
+        margin-top: 10px; /* Khoảng cách với form tìm kiếm */
+    }
+
+    .listProduct,
+    .listproducts2,
+    .listproducts3,
+    .listproducts4 {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr); /* Chỉ hiển thị 1 sản phẩm trên mỗi hàng */
+        gap: 10px; /* Khoảng cách giữa các sản phẩm */
+    }
+    
+    .listProduct > label,
+    .listproducts2 > label,
+    .listproducts3 > label,
+    .listproducts4 > label {
+        color: pink; /* Màu chữ cho các label */
+        font-size: 24px; /* Kích thước font cho các label */
+        line-height: 1.5; /* Độ cao dòng */
+    }
+}
+
+}
+
+/* CSS cho các label */
+label.logo {
+    color: pink;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 30px;
+    font-weight: 700;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+:root {
+    --green: pink;
+    --black: pink;
+    --light-color: #666;
+    --box-shadow: 0.5rem 1.5rem rgba(0, 0, 0, .1);
+}
+
+* {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all 0.2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5.5rem;
+    scroll-behavior: smooth;
+}
+
+header .logo {
+    color: var(--black);
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+
+header .logo i {
+    color: var(--green);
+}
+
+header .navbar a {
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    color: var(--light-color);
+}
+
+header .navbar a:hover {
+    color: #fff;
+    background: var(--green);
+}
+
+header .icons i,
+header .icons a {
+    cursor: pointer;
+    margin-left: .5rem;
+    height: 4.5rem;
+    line-height: 4.5rem;
+    width: 4.5rem;
+    text-align: center;
+    font-size: 1.7rem;
+    color: var(--black);
+    border-radius: 50%;
+    background: #eee;
+}
+
+header .icons i:hover,
+header .icons a:hover {
+    color: #fff;
+    background: var(--green);
+    transform: rotate(360deg);
+}
+
+.search-form {
+    font-size: 30px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 1.7rem;
+    color: #fff;
+    background: pink;
+    border-radius: .5rem;
+    cursor: pointer;
+    padding: .8rem 3rem;
+}
+
+.btn:hover {
+    background: black;
+    letter-spacing: .1rem;
+}
